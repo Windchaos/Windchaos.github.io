@@ -17,6 +17,7 @@
         
         <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
 
+    
         
         <!--浏览器指针-->
         <link rel="stylesheet" href="/css/mouse.css">
@@ -154,7 +155,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/日常" style="color: #03a9f4">
+                <a href="/tags/日常" style="color: #00a596">
                     日常
                 </a>
             </span>
@@ -167,6 +168,12 @@
 
     </div>
     
+    <link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
+    
 </div>
 
 <br>
@@ -176,9 +183,6 @@
   </span>
 
 
-
-
-    
                          
 <footer id="footer">
     <div class="footer-wrap">
@@ -237,6 +241,24 @@ setInterval("createtime()",250);
         <script src="/js/particlex.js"></script>
         <script src="/js/showimg.js"></script>
         
+<script src="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.js"></script>
+<script>
+    var clientID = "fcf90c63af95306f3921", clientSecret = "574d0caafe15bbe7f8306ecb2c6406d62ff083fb";
+    
+    const gitalk = new Gitalk({
+        clientID: clientID,
+        clientSecret: clientSecret,
+        repo: "https://github.com/Windchaos/blog-comments.git",
+        owner: "Windchaos",
+        admin: ["Windchaos"],
+        language: "zh-CN",
+        id: location.pathname,
+        distractionFreeMode: false,
+        
+    })
+    gitalk.render("gitalk-container")
+</script>
+
 
         
     <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
