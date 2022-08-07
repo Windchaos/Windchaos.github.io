@@ -156,7 +156,7 @@
             
             <span class="tag">
                 
-                <a href="/tags/测试" style="color: #ffa2c4">
+                <a href="/tags/测试" style="color: #03a9f4">
                     测试
                 </a>
             </span>
@@ -169,6 +169,12 @@
 
     </div>
     
+    <link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
+    
 </div>
 
 <br>
@@ -176,12 +182,23 @@
 <span>
     本文总阅读量<span id="busuanzi_value_page_pv"></span>次
   </span>
-  
+
+
+
 
     
                          
 <footer id="footer">
     <div class="footer-wrap">
+        
+        <!-- 不蒜子计数访问量 -->
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+        </script>
+        <span >
+    已经有<span id="busuanzi_value_site_uv"></span>人探访小站了~
+        </span>
+        <br>
+        
         <div>
             © 2022 - 2022 吹の窝
             <span class="footer-icon">
@@ -190,8 +207,8 @@
             @windchaos
         </div>
         <div></div>
-        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> & <a
-                target="_blank" rel="noopener" href="https://github.com/argvchs/hexo-theme-particlex">ParticleX Theme</a></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> 
+        </div>
         
     </div>
 </footer>
@@ -216,13 +233,6 @@ setInterval("createtime()",250);
 </script>
 
 
-<!-- 不蒜子计数访问量 -->
-<br>
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-<span >
-    已经有<span id="busuanzi_value_site_uv"></span>人探访小站了~
-  </span>
 
                     </div>
                 </div>
@@ -235,6 +245,24 @@ setInterval("createtime()",250);
         <script src="/js/particlex.js"></script>
         <script src="/js/showimg.js"></script>
         
+<script src="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.js"></script>
+<script>
+    var clientID = "fcf90c63af95306f3921", clientSecret = "ac8a27f38e4b4a23945785b907758bc432910765";
+    
+    const gitalk = new Gitalk({
+        clientID: clientID,
+        clientSecret: clientSecret,
+        repo: "blog",
+        owner: "Windchaos",
+        admin: ["Windchaos"],
+        language: "zh-CN",
+        id: location.pathname,
+        distractionFreeMode: false,
+        
+    })
+    gitalk.render("gitalk-container")
+</script>
+
 
         
     <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
