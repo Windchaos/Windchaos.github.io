@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-        <title>Tags: 水逆的一天 | 吹の窝</title>
+        <title>夏花 | 吹の窝</title>
         <meta name="author" content="windchaos">
         <meta name="description" content="多少岁月想要伴你走过<br />燕回春野 蝉鸣夏夜<br /> 说予我">
         <meta name="keywords" content="blog">
@@ -126,113 +126,65 @@
 </nav>
                     </div>
                     <div id="main">
-                         
-<div class="categories-tags">
-    
-    <div class="all-s">
-        
-        
-        <span>
-            <a href="/tags/测试/" style="background: #00a596">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                测试
-            </a>
+                        
+
+<div class="article">
+    <div>
+        <h1>夏花 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/8/21
         </span>
         
-        
-        <span>
-            <a href="/tags/水逆的一天/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
+        <span class="category">
+            <a href="/categories/日常">
                 <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                水逆的一天
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/tags/日常/" style="background: #ffa2c4">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
                 </span>
                 日常
             </a>
         </span>
         
         
-        <span>
-            <a href="/tags/电影/" style="background: #ffa2c4">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                电影
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/tags/夜行/" style="background: #ff7d73">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                夜行
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/tags/整理现状/" style="background: #00bcd4">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                整理现状
-            </a>
-        </span>
-        
-    </div>
-    <div id="archives">
-        
-        <div class="timeline">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2022/8/5</div>
-                <a href="/2022/08/05/伤口/">
-                    <h3>伤口</h3>
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/整理现状" style="color: #03a9f4">
+                    整理现状
                 </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/categories/日常">
-                            <span class="icon">
-                                <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
-                            </span>
-                            日常
-                        </a>
-                    </span>
-                    
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                        </span>
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/水逆的一天" style="color: #ff7d73">
-                                水逆的一天
-                            </a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
+            </span>
+            
+        </span>
         
     </div>
+    <div class="content" v-pre>
+        <p>爱意萌生于月光下<br>阳炎眩乱<br>它枯死在热情中<br>影子印烙在水泥板上<br>夏日已矣<br>你走入没有日月的夜<br>你能发现它<br>它比夜更黑</p>
+
+    </div>
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
+    
 </div>
+
+<br>
+<!--不蒜子计数-->
+<span>
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+  </span>
+
+
                          
 <footer id="footer">
     <div class="footer-wrap">
@@ -291,6 +243,24 @@ setInterval("createtime()",250);
         <script src="/js/particlex.js"></script>
         <script src="/js/showimg.js"></script>
         
+<script src="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.js"></script>
+<script>
+    var clientID = "fcf90c63af95306f3921", clientSecret = "574d0caafe15bbe7f8306ecb2c6406d62ff083fb";
+    
+    const gitalk = new Gitalk({
+        clientID: clientID,
+        clientSecret: clientSecret,
+        repo: "blog-comments",
+        owner: "Windchaos",
+        admin: ["Windchaos"],
+        language: "zh-CN",
+        id: location.pathname,
+        distractionFreeMode: false,
+        
+    })
+    gitalk.render("gitalk-container")
+</script>
+
 
         
     <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
