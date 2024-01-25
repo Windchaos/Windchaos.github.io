@@ -1,0 +1,300 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>伤口 | 吹の窝</title>
+        <meta name="author" content="windchaos">
+        <meta name="description" content="多少岁月想要伴你走过<br />燕回春野 蝉鸣夏夜<br /> 说予我">
+        <meta name="keywords" content="blog">
+        <link rel="icon" href="/assets/02.jpg">
+        <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
+        <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
+        
+        <link rel="stylesheet" href="/css/fonts.min.css">
+        <link rel="stylesheet" href="/css/particlex.css">
+        
+        <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
+
+    
+        
+        <!--浏览器指针-->
+        <link rel="stylesheet" href="/css/mouse.css">
+    <meta name="generator" content="Hexo 6.2.0"></head>
+    
+
+    <body>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div>
+        <div id="layout">
+            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+            <transition name="into">
+                <div v-show="show_page" style="display: -not-none">
+                    <div id="menu_show">
+                         
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">吹の窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;主页</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;概览</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+    </div>
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
+        <div :class="'title'" @click="menu_show = !menu_show">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;吹の窝</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menu_show">
+            
+            <a href="">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">主页</div>
+                </div>
+            </a>
+            
+            <a href="about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">关于</div>
+                </div>
+            </a>
+            
+            <a href="archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">概览</div>
+                </div>
+            </a>
+            
+            <a href="categories">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                </div>
+            </a>
+            
+            <a href="tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+                    </div>
+                    <div id="main">
+                        
+
+<div class="article">
+    <div>
+        <h1>伤口 </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/8/5
+        </span>
+        
+        <span class="category">
+            <a href="/categories/日常">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                </span>
+                日常
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/水逆的一天" style="color: #03a9f4">
+                    水逆的一天
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    <div class="content" v-pre>
+        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉，这个密码看着不太对，请再试试。" data-whm="抱歉，这个文章不能被纠正，不过您还是能看看解密后的内容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="3aa50ba64261f282af90ca12df61fee1e3c2f355a57d6b2e037cf67e819d5872">22064b17c03cb0c0e58c99349b6889d0c88df3285b519b5c2c93a01bf06fef2324ec9d9ac37d7ae1ad5faf3ab46af4e2855d0189677681b74258d9e20029cca4f65140b4d9de1b33dc7cba7b8f3f1ec7596b151f86ad951795e32d9df4630929763ea4c48a91de3bf3699fe1d8a55eead90eba25cb4ed8eb27a3d313808514c21c30210d854f2f2fb2cdd2967c252631fad6f93cf64d63201a4a45783ae4a0a491088331a46a337f737f1ba3ca23765dce0014f4bb5c5d8eab3a635a681a72915f4b27d65aa949b202628ea6bc82fdbd523e6a0c9d06beb94c3afc254ab91623670cfbc982a9c4a91232af450f22efc0bebb8486512e2cd45ca2be5e037943351cf5f1313da77dd357fff2ef37c8301343057d73e610f622ab63635e34ca8df745ca851945f917945bbd48dc7275d3d15823e0e9eae0859f1cd7f412b09a9d7cdf647dc07e22adffeabe346cfb78ff436404a001e33075f9e2baca9a6df22efb568814d80671699d4dd37260ba460866323483680aa263c1cfce5505e8b909f7f943d2ac9638a11dffaf14e9e15e16e9819ebb96df27844e806055a75d9eec185399f32ce3d59f24ed23ebcd4523481ddeb1a0e5dd0f4ad6f2191e305aaefbe89b255291fc7f97fecf4818259db9e43f094469e781b40a5d93b35255c0aa17d336e80ee352623be2d9b1f19cb4fd02410fd6dd08ebe7f2e442e7d2b2acfed0a6db86ce0706c2225cdfee7c1f7bb153d8274b4e19e792667a7d47b758382e9851d2e1cdc1f5adc626caf1156508d0d63630705be8c123676c3dc851241148fa260f661ec4369de237f62572f249f2c7579e5b1c8f40e6d9f16f9b7c8136011d6955dcffb3f4daf504313032f5e976743235cbc13a4d375da4b81db1514132d7a44a9bc54fd9567e466cf1c96109155a1674bd52e647f8edba5c16d0108e778b598121446680e2ad6f0b87f4e82340452463eaf5544834231cb003f5873ff492d80240ac52200f663ecda89a1b89a580ab4d7f5bf4069033a606af0b7b78b8dbf8b0a28ed147bf674cd08d52adc75b724da8a23d92ff1e12b304a5e8a34d23ebb84a3b8a938160e417f42cd04945fbdefeb8cfd3420c5702edea70d47db276fc2c28f824561846d0729c3e3b115acfa9f45751de895db48cb07cafabd45a9a9107a59ff17c691e7e0ee61fedb8ace68e7b9dad749ce6f996b9a7685c084ad8fa7681fc073e46cea957032d4bf377b47aca200894e39d343d527ec5526707362e10d736de24704747760d51c245d759c7a27d6b053b75555be848d55858fb8b928423223e2d45eb1e2bb0acb4d58c692278f7be344ebf9a15ea326416c75868d332569848edd5064032b5dcda7da03c8612d5e43883cd3d701c35897a368787f3629567644ee9fdfa5c44d8008954b062e04d06ff00cde132821b537e1cd448cdfd810fbbc250b28f4b04c6d7c400c0ae77e6f6e88bd45df83c792762fee37d486678d231f585591d352fdf173c51c232cbed20348566c09bf86efcf1566712949b44d148ddb0aa754e04c94f9499483d868cbc966975f86ce22dc4a92d685af3f90d612b7bbdc8ab472c7a6d7b5c2381abb9553db85bab5aecd1ba4c26d4ad52cd6e39d7f03de7f12e3543484e1c87d5eb56e28385f91fdca7456e0e2bb5dc58cfcc800b00ef4e3c55a508879ea5e67fff2ca52a1348eed06e74d97b62d428b7149b5dfd94c1125be3917a26cbea6fb27a169c27ae2a825ca244b2e71c0835f273b7f91d9eda38b6b1de8d83ec30f25304d85df7f818326f4656fc1a23eec6b6e40a4e2e7453010b61e7dce8b08470ffcd44e7451e62881e1c107fb03d2096e50bb79a52c6dae9ae1e91b943c193ae0091e59c2a56251c04b014d7a8feebd3a33a6625e618a09c294fc62554657b90553a2045b515ba49d9a15607fbd89e7bcc8644d5dc671b4172e1279ffc320468e542acfd92be2c47a56ecf9b91199803c3739ed8e82d556cecb94e556bb22640aef6d8401d839ee3f2d57bfb247357f66544d9fc70e52b495dbc7232c7b7b461d3d4e78a6a149a2e496e064f6f6c073b13149429d2ca5c4393ceacbe3a7cd278a846e4e8c1e71fee9ac3b9374ed37775b422dc7858fb44e1acd64dc145f9a990a4b63abebc8e9917d0a89c6494d3ac7621d013ef88b91c4fbe31a9305f0151179a2f9691957e42b7c425a7b9c934faab87a6f067729ebf96069ad1e386c2890c38ea653b591e2c32632ce41eb716022068a620d10b790f84aae8ec818934355e1111d9ad112209358638df736eac2c825ead8f83b74a6e50db022a381e25e5a07e56c9466b3fefb95099aa08c222f6849d5ecc8ff4710c8c7a02be2e90b9341736a6292b47d6f84dbf1ce7f0ebc01a46ad1d9a8c94f6daa9bc877fdcffc437b047acba535eb655645d3e0ee6a9a69dbbd18453bf0f565a7bb007b0c143d02b0bdf087b0b1d846855e339b6f6d6ae8d76cc26b82b235a6d6339ceb10b9c9946eb1f60158045f5cac04bdb79ee1233a6fcf11f21fcde054b7a49cef6bcc6b59b200f86e6cbe475dbd91baff1fb81ed0354c24448d5ebaaefba49694ecc28ea77022ec907c76c186860acc3f0abdd271c283e6fdd15b746fd5e103e0983a66af8352d4cb034f31bcd8b255dcd1d07fe9aaee8288a6afce7561243e6376bd8a63592b54a7c72d5d535d59912aa97a3ae3415dd58e092308d92be27068d377d2fab7de29ef19b74cd2e7e71e79fb8a67464c9fc77d3ef3fd7f4d29426e93febe5c98b0068bac2cdcd3713bff497898cd14e7363f9611f6a959a66dd90fc988c5ba28d371f3f042e2dfec4245fdd8b8e98560efeca687314b0075982e7666af736c5033011c68298762ff179050230b7bb6da0cf207d7904efd6d10af70533986b77f73f2b73b6b4cfdeb2e7184599704534c4ce734cfa5c38d39cdbab0db597036eeffe04c3d98c3c054afa879468520eaef1bd834971fa7c7f4f01dddf9a6f4c34535136dcffcb53dd34638a3db63acd535302f0030e858947e42152e445245bd38ec127abab80e4d05a333eb78d7b3fa1d1aa0072a5c5a91cd854317f49dd8a175f81a547e426c18aaa49852792f11ea0a09ea98dd47c8beb8565fb5a9b6a2a05ffbd80d5cd26a33b511cef28a7c7e1311474790c19cd6ee7b3bd81ca8aa0f489a55451c2a74f5e777e9afb52d4dcc48a5ebdd84ffb685265caa1878f83d29118b5d01bc45a92c6b55f038e431cbaa3180e1eb4c6a5a47a8b200504f0e017466a984e8e20ba40d4c954f95c620396ac3fbc6349ee4dd08c176a9d4b9b899d47565a40ab98573e442b8d9f0cb67e03f44476b7c899d4b75b9331f0225f06522b919175521edf4066bb028fd7ae78930a2d6083a5190cb684d3bda670ac4f69643d9689712fce7e8a311f68818ce42b6351d755624da4ac9a1c4f9d988c6a30594e8582cfe3e91893cc125dffb95e4ff22f1db442</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">康康你的（密码）</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+    </div>
+    
+    <link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.css">
+    <div id="comment">
+        <div id="gitalk-container">
+        </div>
+    </div>
+    
+</div>
+
+<br>
+<!--不蒜子计数-->
+<span>
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+  </span>
+
+
+                         
+<footer id="footer">
+    <div class="footer-wrap">
+        
+        <!-- 不蒜子计数访问量 -->
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+        </script>
+        <span >
+    已经有<span id="busuanzi_value_site_uv"></span>人探访小站了~
+        </span>
+        <br>
+        
+        <div>
+            © 2022 - 2024 吹の窝
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @windchaos
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> 
+        </div>
+        
+    </div>
+</footer>
+
+<!-- 运行天数 -->
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("8/3/2022 17:38:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",250);
+</script>
+
+
+
+                    </div>
+                </div>
+            </transition>
+            <div id="img_show">
+                <img id="img_content" alt="img_show">
+            </div>
+        </div>
+        <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
+        <script src="/js/particlex.js"></script>
+        <script src="/js/showimg.js"></script>
+        
+<script src="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.js"></script>
+<script>
+    var clientID = "fcf90c63af95306f3921", clientSecret = "574d0caafe15bbe7f8306ecb2c6406d62ff083fb";
+    
+    const gitalk = new Gitalk({
+        clientID: clientID,
+        clientSecret: clientSecret,
+        repo: "blog-comments",
+        owner: "Windchaos",
+        admin: ["Windchaos"],
+        language: "zh-CN",
+        id: location.pathname,
+        distractionFreeMode: false,
+        
+    })
+    gitalk.render("gitalk-container")
+</script>
+
+
+        
+    <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
+
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/love.js"></script>
+
+<!-- 插入Aplayer播放器 -->
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+
+<!--浏览器搞笑标题-->
+<script type="text/javascript" src="/js/FunnyTitle.js"></script>
+
+<!--动态线条背景-->
+<script type="text/javascript"
+color="255,187,197" opacity='0.7' zIndex="-1" count="100" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+
+
+
+<!--樱花动-->
+<script src="/js/sakura.js"></script>

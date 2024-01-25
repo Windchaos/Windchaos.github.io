@@ -1,0 +1,789 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+        <title>吹の窝</title>
+        <meta name="author" content="windchaos">
+        <meta name="description" content="多少岁月想要伴你走过<br />燕回春野 蝉鸣夏夜<br /> 说予我">
+        <meta name="keywords" content="blog">
+        <link rel="icon" href="/assets/02.jpg">
+        <script src="https://cdn.staticfile.org/instant.page/5.1.0/instantpage.min.js" type="module"></script>
+        <script src="https://cdn.staticfile.org/font-awesome/6.1.1/js/all.min.js"></script>
+        
+        <link rel="stylesheet" href="/css/fonts.min.css">
+        <link rel="stylesheet" href="/css/particlex.css">
+        
+        <script src="https://cdn.staticfile.org/vue/3.2.33/vue.global.prod.min.js"></script>
+
+    
+        
+        <!--浏览器指针-->
+        <link rel="stylesheet" href="/css/mouse.css">
+    <meta name="generator" content="Hexo 6.2.0"></head>
+    
+
+    <body>
+        <div id="loading" style="height:100vh;width:100vw;position:fixed;display:flex;z-index:200;justify-content:space-between;background:#fff;transition:opacity 0.3s ease-out"><div style="position:fixed;height:100vh;width:100vw;display:flex;justify-content:center;align-items:center"><div id="loadcontent" style="width:50vmin;height:50vmin;padding:50px;border-radius:50%;display:flex;justify-content:center;align-items:center;border:solid 10px #a3ddfb;text-align:center"><div><h2>LOADING...</h2><p style="word-break:keep-all">加载过慢请开启缓存(浏览器默认开启)</p><div><img alt="loading" src="/loading.gif"></div></div></div></div></div>
+        <div id="layout">
+            <i data-fa-symbol="calendar-solid" class="fa-solid fa-calendar fa-fw"></i>
+            <i data-fa-symbol="bookmark-solid" class="fa-solid fa-bookmark fa-fw"></i>
+            <i data-fa-symbol="tags-solid" class="fa-solid fa-tags fa-fw"></i>
+            <transition name="into">
+                <div v-show="show_page" style="display: -not-none">
+                    <div id="menu_show">
+                         
+<nav id="menu">
+    <div class="desktop-menu">
+        <a href="/">
+            <span class="title">吹の窝</span>
+        </a>
+        
+        <a href="/">
+            <i class="fa-solid fa-house fa-fw"></i>
+            <span>&ensp;主页</span>
+        </a>
+        
+        <a href="/about">
+            <i class="fa-solid fa-id-card fa-fw"></i>
+            <span>&ensp;关于</span>
+        </a>
+        
+        <a href="/archives">
+            <i class="fa-solid fa-box-archive fa-fw"></i>
+            <span>&ensp;概览</span>
+        </a>
+        
+        <a href="/categories">
+            <i class="fa-solid fa-bookmark fa-fw"></i>
+            <span>&ensp;归档</span>
+        </a>
+        
+        <a href="/tags">
+            <i class="fa-solid fa-tags fa-fw"></i>
+            <span>&ensp;标签</span>
+        </a>
+        
+    </div>
+    <div :class="'phone-menu ' + menu_show" id="phone-menu">
+        <div class="curtain" @click="menu_show = !menu_show" v-show="menu_show"></div>
+        <div :class="'title'" @click="menu_show = !menu_show">
+            <i class="fa-solid fa-bars fa-fw"></i>
+            <span>&emsp;吹の窝</span>
+        </div>
+        <transition name="slide">
+        <div class="items" v-show="menu_show">
+            
+            <a href="">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-house fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">主页</div>
+                </div>
+            </a>
+            
+            <a href="about">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-id-card fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">关于</div>
+                </div>
+            </a>
+            
+            <a href="archives">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-box-archive fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">概览</div>
+                </div>
+            </a>
+            
+            <a href="categories">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-bookmark fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">归档</div>
+                </div>
+            </a>
+            
+            <a href="tags">
+                <div class="item">
+                    <div style="min-width: 20px; max-width: 50px; width: 10%">
+                        <i class="fa-solid fa-tags fa-fw"></i>
+                    </div>
+                    <div style="min-width: 100px; max-width: 150%; width: 20%">标签</div>
+                </div>
+            </a>
+            
+        </div>
+        </transition>
+    </div>
+</nav>
+                    </div>
+                    <div id="main">
+                        <div id="home-head">
+    <div id="home-background" style="background-image: url(/assets/01.jpg)"></div>
+    
+    <div id="home-info" class="home-info" @click="home_click">
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="loop"></span>
+        <span class="info">
+            <div class="wrap">
+                <h1>吹の窝</h1>
+                <h3></h3>
+                <h5>多少岁月想要伴你走过<br />燕回春野 蝉鸣夏夜<br /> 说予我</h5>
+            </div>
+        </span>
+    </div>
+    
+</div>
+
+<div id="home-posts-wrap" class=>
+    <div id="home-posts">
+        <div id="posts">
+            
+
+<div class="post">
+    <a href="/2023/11/30/学习-packet-tracer/">
+        <h2>
+            学习 Packet Tracer
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/挖坑学习">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                挖坑学习
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2023/11/30
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <h2 id="Cisco-PT模拟实验-1-交换机的基本配置与管理"><a href="#Cisco-PT模拟实验-1-交换机的基本配置与管理" class="headerlink" title="Cisco PT模拟实验(1) 交换机的基本配置与管理"></a>Cisco PT模拟实验(1) 交换机的基本配置与管理</h2><h3 id="实验目的："><a href="#实验目的：" class="headerlink" title="实验目的："></a>实验目的：</h3><pre><code>掌握交换机的基本配置与管理
+了解交换机配置的基本命令。
+</code></pre>
+<h3 id="技术原理："><a href="#技术原理：" class="headerlink" title="技术原理："></a>技术原理：</h3><pre><code>二层交换机工作在OSI模型的第2层（数据链路层），识别数据包中的MAC地址信息，根据MAC地址进行转发，并将这些MAC地址与对应的端口记录在自己内部的一个地址表中。
+交换机的管理方式基本分为两种：带内管理和带外管理。
+通过交换机的 Console 端口 管理交换机属于带外管理； 这种管理方式不占用交换机的网络端口， 第一次配置交换机必须利用 Console 端口进行配置。
+通过 Telnet、 拨号等方式（TCP/IP协议）属于带内管理。
+</code></pre>
+<h3 id="交换机的命令行操作模式主要包括："><a href="#交换机的命令行操作模式主要包括：" class="headerlink" title="交换机的命令行操作模式主要包括："></a>交换机的命令行操作模式主要包括：</h3><pre><code>用户模式            Switch&gt;
+特权模式            Switch#
+全局配置模式         Switch(config)#
+端口模式            Switch(config-if)#
+</code></pre>
+<p><img src="/images/01.png" alt="666"></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/计算机网络" style="color: #ffa2c4">
+                计算机网络
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2023/11/30/学习-packet-tracer/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2023/08/26/蝉鸣消失在天尽头/">
+        <h2>
+            蝉鸣消失在天尽头
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/日常">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                日常
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2023/8/26
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <h3 id="某天-我醒来-晚日将落。"><a href="#某天-我醒来-晚日将落。" class="headerlink" title="某天 我醒来 晚日将落。"></a>某天 我醒来 晚日将落。</h3><h4 id="向日葵盛开的夏天-自此告终（9-16）"><a href="#向日葵盛开的夏天-自此告终（9-16）" class="headerlink" title="向日葵盛开的夏天  自此告终（9.16）"></a><del>向日葵盛开的夏天  自此告终（9.16）</del></h4><h4 id="今年的夏天还不能算作开始（9-17）"><a href="#今年的夏天还不能算作开始（9-17）" class="headerlink" title="今年的夏天还不能算作开始（9.17）"></a><del>今年的夏天还不能算作开始（9.17）</del></h4><h4 id="我舀来满勺夏风-仍是难留你（9-23）"><a href="#我舀来满勺夏风-仍是难留你（9-23）" class="headerlink" title="我舀来满勺夏风 仍是难留你（9.23）"></a>我舀来满勺夏风 仍是难留你（9.23）</h4><h4 id="你是否会融化于无尽盛夏（10-17）"><a href="#你是否会融化于无尽盛夏（10-17）" class="headerlink" title="你是否会融化于无尽盛夏（10.17）"></a>你是否会融化于无尽盛夏（10.17）</h4><h2 id="另记："><a href="#另记：" class="headerlink" title="另记："></a>另记：</h2><h3 id="曾经沧海难为水，除却巫山不是云"><a href="#曾经沧海难为水，除却巫山不是云" class="headerlink" title="曾经沧海难为水，除却巫山不是云"></a>曾经沧海难为水，除却巫山不是云</h3><h5 id="鲤城之夏，真乃漫漫也。居于此地三个年头，忆中此地恒炎热，却不及吾之热忱。早约彼女共观南方之夏，自初夏蝉鸣始，而终于霜华末蝉鸣止，以至万物归寂，终无果，遂作罢。"><a href="#鲤城之夏，真乃漫漫也。居于此地三个年头，忆中此地恒炎热，却不及吾之热忱。早约彼女共观南方之夏，自初夏蝉鸣始，而终于霜华末蝉鸣止，以至万物归寂，终无果，遂作罢。" class="headerlink" title="鲤城之夏，真乃漫漫也。居于此地三个年头，忆中此地恒炎热，却不及吾之热忱。早约彼女共观南方之夏，自初夏蝉鸣始，而终于霜华末蝉鸣止，以至万物归寂，终无果，遂作罢。"></a>鲤城之夏，真乃漫漫也。居于此地三个年头，忆中此地恒炎热，却不及吾之热忱。早约彼女共观南方之夏，自初夏蝉鸣始，而终于霜华末蝉鸣止，以至万物归寂，终无果，遂作罢。</h5><p><img src="/images/fjg.png" alt="风经过"></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/纪念" style="color: #ff7d73">
+                纪念
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2023/08/26/蝉鸣消失在天尽头/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2023/05/26/入党纪念/">
+        <h2>
+            入党纪念
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/日常">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                日常
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2023/5/26
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <h1 id="亲爱的达瓦里氏："><a href="#亲爱的达瓦里氏：" class="headerlink" title="亲爱的达瓦里氏："></a>亲爱的达瓦里氏：</h1><ul>
+<li><h2 id="5月20日是入党日期"><a href="#5月20日是入党日期" class="headerlink" title="5月20日是入党日期"></a>5月20日是入党日期</h2></li>
+<li>人最宝贵的是生命。生命对于每个人只有一次，人的一生应当这样度过：当他回首往事的时候，他不会因为虚度年华而悔恨，也不会因为碌碌无为而羞愧；临终之际，他能够说：“我的整个生命和全部精力，都献给了世界上最壮丽的事业——为人类的解放而斗争。”</li>
+<li><h1 id="勿忘理想！"><a href="#勿忘理想！" class="headerlink" title="勿忘理想！"></a>勿忘理想！</h1></li>
+</ul>
+<p><img src="/images/tu.png" alt="tu"></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/入党纪念" style="color: #03a9f4">
+                入党纪念
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2023/05/26/入党纪念/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2022/08/21/夏花/">
+        <h2>
+            夏花
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/日常">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                日常
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/8/21
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p><strong>爱意萌生于月光下</strong><br><strong>阳炎眩乱</strong><br><strong>它枯死在热情中</strong><br><strong>影子印烙在水泥板上</strong><br><strong>夏日已矣</strong><br><strong>你走入没有日月的夜</strong><br><strong>你能发现它</strong><br><strong>它比夜更黑</strong></p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/整理现状" style="color: #03a9f4">
+                整理现状
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/08/21/夏花/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2022/08/20/夜行/">
+        <h2>
+            夜行
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/日常">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                日常
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/8/20
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p>人类的灵魂，据说颜色是纯白无瑕的。他们喜欢冲入雨纷纷的夜里，穿行在星光灿烂的原野。暗夜的苦闷追不上飞驰的身影，请追随白光，放声高歌。大胆走你的夜路。</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/夜行" style="color: #00bcd4">
+                夜行
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/08/20/夜行/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2022/08/06/电影和夜路/">
+        <h2>
+            疫苗和电影和夜路
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/日常">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                日常
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/8/6
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p>　　<br>　　上午去打了狂犬疫苗，竟要100+一针，一共5针。可能有点贵，希望学平险能给报销一点。</p>
+<p>　　晚上和sf去看《独行月球》，剧情虽略显老套，不过也有戳中我笑点和泪点的时候。结尾撞陨石和《流浪地球》差不多，姑且算作致敬……另外，贵点的柠檬水就是好喝亿点。</p>
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/夜行" style="color: #ffa2c4">
+                夜行
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/电影" style="color: #ffa2c4">
+                电影
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/08/06/电影和夜路/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2022/08/05/伤口/">
+        <h2>
+            伤口
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/日常">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                日常
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/8/5
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            （这里有东西被加密了，需要输入密码查看哦~）
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/水逆的一天" style="color: #00a596">
+                水逆的一天
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/08/05/伤口/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2022/08/05/测试文章/">
+        <h2>
+            测试文章
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/8/5
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p>这是一篇测试文章，创建于二零二二年八月四日夜，七夕。此夜喂食小狗，独游古镇，夜览星河，披漫天繁星，驰骋于林间公路，甚快。</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/测试" style="color: #00a596">
+                测试
+            </a>
+        </span>
+        
+        <span class="tag">
+            
+            <a href="/tags/日常" style="color: #03a9f4">
+                日常
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/08/05/测试文章/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
+    <a href="/2022/08/03/hello-world/">
+        <h2>
+            Hello World
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/没啥用">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                没啥用
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2022/8/3
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <p>（介绍已删除）</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/测试" style="color: #00bcd4">
+                测试
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2022/08/03/hello-world/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+             
+<div class="page-current">
+    <div class="prev">
+        
+    </div>
+    <div class="page-index">
+        
+        <span class="current">
+            1
+        </span>
+        
+    </div>
+    <div class="next">
+        
+    </div>
+</div>
+        </div>
+    </div>
+    
+    <div id="home-card">
+        <div id="card-div">
+    <div class="card-style" style="width: 300px">
+        <div class="avatar">
+            <img src="/assets/02.jpg " alt="avatar">
+        </div>
+        <div class="name">
+            windchaos
+        </div>
+        <div class="descriptions">
+            
+            <div class="description">
+                泛泛人类不会祈祷
+            </div>
+            
+        </div>
+        <div class="icon-links">
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="https://github.com/Windchaos">
+                    <i class="fa-brands fa-github fa-fw"></i>
+                </a>
+            </span>
+            
+            <span class="icon-link">
+                <a target="_blank" rel="noopener" href="http://wpa.qq.com/msgrd?v=3&uin=860760488&site=qq&menu=yes">
+                    <i class="fa-brands fa-qq fa-fw"></i>
+                </a>
+            </span>
+            
+        </div>
+        <div class="friend-links">
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://forrest-wcb.github.io">
+                    forrest's blog
+                </a>
+            </div>
+            
+            <div class="friend-link">
+                <a target="_blank" rel="noopener" href="https://moi-mo.github.io">
+                    moi's bolg
+                </a>
+            </div>
+            
+        </div>
+    </div>
+</div>
+    </div>
+    
+</div>
+                         
+<footer id="footer">
+    <div class="footer-wrap">
+        
+        <!-- 不蒜子计数访问量 -->
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js">
+        </script>
+        <span >
+    已经有<span id="busuanzi_value_site_uv"></span>人探访小站了~
+        </span>
+        <br>
+        
+        <div>
+            © 2022 - 2024 吹の窝
+            <span class="footer-icon">
+                <i class="fa-solid fa-font-awesome fa-fw"></i>
+            </span>
+            @windchaos
+        </div>
+        <div></div>
+        <div>Based on the <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo Engine</a> 
+        </div>
+        
+    </div>
+</footer>
+
+<!-- 运行天数 -->
+<span id="timeDate">载入天数...</span><span id="times">载入时分秒...</span>
+<script>
+    var now = new Date(); 
+    function createtime() { 
+        var grt= new Date("8/3/2022 17:38:00");//在此处修改你的建站时间，格式：月/日/年 时:分:秒
+        now.setTime(now.getTime()+250); 
+        days = (now - grt ) / 1000 / 60 / 60 / 24; dnum = Math.floor(days); 
+        hours = (now - grt ) / 1000 / 60 / 60 - (24 * dnum); hnum = Math.floor(hours); 
+        if(String(hnum).length ==1 ){hnum = "0" + hnum;} minutes = (now - grt ) / 1000 /60 - (24 * 60 * dnum) - (60 * hnum); 
+        mnum = Math.floor(minutes); if(String(mnum).length ==1 ){mnum = "0" + mnum;} 
+        seconds = (now - grt ) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum); 
+        snum = Math.round(seconds); if(String(snum).length ==1 ){snum = "0" + snum;} 
+        document.getElementById("timeDate").innerHTML = "本站已安全运行 "+dnum+" 天 "; 
+        document.getElementById("times").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒"; 
+    } 
+setInterval("createtime()",250);
+</script>
+
+
+
+                    </div>
+                </div>
+            </transition>
+            <div id="img_show">
+                <img id="img_content" alt="img_show">
+            </div>
+        </div>
+        <script src="https://cdn.staticfile.org/highlight.js/11.5.1/highlight.min.js"></script>
+        <script src="/js/particlex.js"></script>
+        <script src="/js/showimg.js"></script>
+        
+
+        
+    <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+</html>
+
+
+<!-- 页面点击小红心 -->
+<script type="text/javascript" src="/js/love.js"></script>
+
+<!-- 插入Aplayer播放器 -->
+<link rel="stylesheet" href="/dist/APlayer.min.css">
+<div id="aplayer"></div>
+<script type="text/javascript" src="/dist/APlayer.min.js"></script>
+<script type="text/javascript" src="/dist/music.js"></script>
+
+<!--浏览器搞笑标题-->
+<script type="text/javascript" src="/js/FunnyTitle.js"></script>
+
+<!--动态线条背景-->
+<script type="text/javascript"
+color="255,187,197" opacity='0.7' zIndex="-1" count="100" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+</script>
+
+
+
+<!--樱花动-->
+<script src="/js/sakura.js"></script>
