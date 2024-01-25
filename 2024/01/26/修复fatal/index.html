@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
-        <title>Tags: 测试 | 吹の窝</title>
+        <title>修复Fatal | 吹の窝</title>
         <meta name="author" content="windchaos">
         <meta name="description" content="多少岁月想要伴你走过<br />燕回春野 蝉鸣夏夜<br /> 说予我">
         <meta name="keywords" content="blog">
@@ -126,188 +126,71 @@
 </nav>
                     </div>
                     <div id="main">
-                         
-<div class="categories-tags">
+                        
+
+<div class="article">
+    <div>
+        <h1>修复Fatal </h1>
+    </div>
+    <div class="info">
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2024/1/26
+        </span>
+        
+        <span class="category">
+            <a href="/categories/学习">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                </span>
+                学习
+            </a>
+        </span>
+        
+        
+        <span class="tags">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+            </span>
+            
+            <span class="tag">
+                
+                <a href="/tags/解决从本地push到云的某些问题" style="color: #ffa2c4">
+                    解决从本地push到云的某些问题
+                </a>
+            </span>
+            
+        </span>
+        
+    </div>
+    <div class="content" v-pre>
+        <h3 id="克隆代码时报错"><a href="#克隆代码时报错" class="headerlink" title="克隆代码时报错"></a>克隆代码时报错</h3><pre><code>git@gitee.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+Please make sure you have the correct access rights
+and the repository exists.
+</code></pre>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>需要更新我们本地的 .ssh 文件夹的内容、并把对应的公钥添加到我们远程仓库上面去。</p>
+<h3 id="实践过程"><a href="#实践过程" class="headerlink" title="实践过程"></a>实践过程</h3><p>1、重新设置git用户名和邮箱(方便提交时知道是哪个用户名提交、名字可随便取)：<br>  点击鼠标右键–&gt;选择 Git Bash Here、然后会弹出一个git终端、输入以下命令：<br>     git config –global user.name “用户名填这里 “         【解析：修改用户名(双引号内填要设置的用户名)】<br>     git config –global user.email “我的邮箱”      【解析：修改邮箱(邮箱名填引号内)：】<br>2、删除本地C盘用户目录下的.ssh 文件夹下的known_host文件<br>3、输入以下<br>     ssh-keygen -t rsa -C “上面设置的邮箱号”<br>4、输入上面命令后一路yes 然后回车、这时候本地电脑C盘系统的.ssh文件夹下会生成两个文件，分别为 id_rsa(密钥)和id_rsa.pub(公钥)<br>5、使用笔记本打开上面说到的id_rsa.pub文件、复制里面的内容，更新到GitHub的SSH中<br>    <img src="/images/02.png" alt="ssh"><br>6、<strong>非常重要的一点</strong>对是否建立联系进行验证，通常运行ssh -T <a href="mailto:&#103;&#105;&#116;&#64;&#103;&#x69;&#116;&#x68;&#117;&#98;&#x2e;&#x63;&#111;&#x6d;">&#103;&#105;&#116;&#64;&#103;&#x69;&#116;&#x68;&#117;&#98;&#x2e;&#x63;&#111;&#x6d;</a>来验证是否连接上。可能会遇到以下ssh connect time out的问题：<br>    $ ssh -T <a href="mailto:&#103;&#x69;&#x74;&#64;&#103;&#105;&#x74;&#104;&#117;&#x62;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#x69;&#x74;&#64;&#103;&#105;&#x74;&#104;&#117;&#x62;&#x2e;&#x63;&#x6f;&#x6d;</a><br>    ssh: connect to host github.com port 22: Connection timed out<br>针对这个问题，解决办法如下：需要通过修改所生成的rsa所在地址~&#x2F;.ssh下面的config文件所实现的<br>    <img src="/images/03.png" alt="Alt text"><br>在config中加入以下代码，而config很有可能是空文件，需要自己加入<br>    Host github.com<br>    HostName ssh.github.com  # 这是最重要的部分<br>    User git<br>    Port 443<br>    PreferredAuthentications publickey<br>    IdentityFile ~&#x2F;.ssh&#x2F;id_rsa<br>一般进行到此步骤便可以解决问题。</p>
+
+    </div>
     
-    <div class="all-s">
-        
-        
-        <span>
-            <a href="/tags/水逆的一天/" style="background: #00a596">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                水逆的一天
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/tags/测试/" style="background: linear-gradient(120deg, #9abbf7 0%, #ffbbf4 100%)">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                测试
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/tags/入党纪念/" style="background: #03a9f4">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                入党纪念
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/tags/整理现状/" style="background: #03a9f4">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                整理现状
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/tags/夜行/" style="background: #00bcd4">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                夜行
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/tags/计算机网络/" style="background: #00a596">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                计算机网络
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/tags/日常/" style="background: #ffa2c4">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                日常
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/tags/纪念/" style="background: #ffa2c4">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                纪念
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/tags/电影/" style="background: #03a9f4">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                电影
-            </a>
-        </span>
-        
-        
-        <span>
-            <a href="/tags/解决从本地push到云的某些问题/" style="background: #00a596">
-                <span class="icon">
-                    <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                </span>
-                解决从本地push到云的某些问题
-            </a>
-        </span>
-        
-    </div>
-    <div id="archives">
-        
-        <div class="timeline">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2022/8/3</div>
-                <a href="/2022/08/03/hello-world/">
-                    <h3>Hello World</h3>
-                </a>
-                <div class="info">
-                    
-                    <span class="category">
-                        <a href="/categories/没啥用">
-                            <span class="icon">
-                                <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
-                            </span>
-                            没啥用
-                        </a>
-                    </span>
-                    
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                        </span>
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/测试" style="color: #ff7d73">
-                                测试
-                            </a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </div>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.css">
+    <div id="comment">
+        <div id="gitalk-container">
         </div>
-        
-        <div class="timeline">
-            <div class="timeline-tail"></div>
-            <div class="timeline-content">
-                <div class="item-time">2022/8/5</div>
-                <a href="/2022/08/05/测试文章/">
-                    <h3>测试文章</h3>
-                </a>
-                <div class="info">
-                    
-                    
-                    <span class="tags">
-                        <span class="icon">
-                            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
-                        </span>
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/测试" style="color: #00bcd4">
-                                测试
-                            </a>
-                        </span>
-                        
-                        <span class="tag">
-                            
-                            <a href="/tags/日常" style="color: #00bcd4">
-                                日常
-                            </a>
-                        </span>
-                        
-                    </span>
-                    
-                </div>
-            </div>
-        </div>
-        
     </div>
+    
 </div>
+
+<br>
+<!--不蒜子计数-->
+<span>
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+  </span>
+
+
                          
 <footer id="footer">
     <div class="footer-wrap">
@@ -366,6 +249,24 @@ setInterval("createtime()",250);
         <script src="/js/particlex.js"></script>
         <script src="/js/showimg.js"></script>
         
+<script src="https://cdn.staticfile.org/gitalk/1.7.2/gitalk.min.js"></script>
+<script>
+    var clientID = "fcf90c63af95306f3921", clientSecret = "574d0caafe15bbe7f8306ecb2c6406d62ff083fb";
+    
+    const gitalk = new Gitalk({
+        clientID: clientID,
+        clientSecret: clientSecret,
+        repo: "blog-comments",
+        owner: "Windchaos",
+        admin: ["Windchaos"],
+        language: "zh-CN",
+        id: location.pathname,
+        distractionFreeMode: false,
+        
+    })
+    gitalk.render("gitalk-container")
+</script>
+
 
         
     <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>

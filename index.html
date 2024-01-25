@@ -151,6 +151,63 @@
             
 
 <div class="post">
+    <a href="/2024/01/26/修复fatal/">
+        <h2>
+            修复Fatal
+        </h2>
+    </a>
+    <div class="category-and-date">
+        
+        <span class="category">
+            <a href="/categories/学习">
+                <span class="icon">
+                    <svg class="fa-icon"><use xlink:href="#bookmark-solid"></use></svg>
+                学习
+            </a>
+        </span>
+        
+        <span class="date">
+            <span class="icon">
+                <svg class="fa-icon"><use xlink:href="#calendar-solid"></use></svg>
+            </span>
+            2024/1/26
+        </span>
+    </div>
+    <div class="excerpt">
+        <div class="content" v-pre>
+            
+            <h3 id="克隆代码时报错"><a href="#克隆代码时报错" class="headerlink" title="克隆代码时报错"></a>克隆代码时报错</h3><pre><code>git@gitee.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+Please make sure you have the correct access rights
+and the repository exists.
+</code></pre>
+<h3 id="解决方法"><a href="#解决方法" class="headerlink" title="解决方法"></a>解决方法</h3><p>需要更新我们本地的 .ssh 文件夹的内容、并把对应的公钥添加到我们远程仓库上面去。</p>
+<h3 id="实践过程"><a href="#实践过程" class="headerlink" title="实践过程"></a>实践过程</h3><p>1、重新设置git用户名和邮箱(方便提交时知道是哪个用户名提交、名字可随便取)：<br>  点击鼠标右键–&gt;选择 Git Bash Here、然后会弹出一个git终端、输入以下命令：<br>     git config –global user.name “用户名填这里 “         【解析：修改用户名(双引号内填要设置的用户名)】<br>     git config –global user.email “我的邮箱”      【解析：修改邮箱(邮箱名填引号内)：】<br>2、删除本地C盘用户目录下的.ssh 文件夹下的known_host文件<br>3、输入以下<br>     ssh-keygen -t rsa -C “上面设置的邮箱号”<br>4、输入上面命令后一路yes 然后回车、这时候本地电脑C盘系统的.ssh文件夹下会生成两个文件，分别为 id_rsa(密钥)和id_rsa.pub(公钥)<br>5、使用笔记本打开上面说到的id_rsa.pub文件、复制里面的内容，更新到GitHub的SSH中<br>    <img src="/images/02.png" alt="ssh"><br>6、<strong>非常重要的一点</strong>对是否建立联系进行验证，通常运行ssh -T <a href="mailto:&#103;&#105;&#116;&#64;&#103;&#x69;&#116;&#x68;&#117;&#98;&#x2e;&#x63;&#111;&#x6d;">&#103;&#105;&#116;&#64;&#103;&#x69;&#116;&#x68;&#117;&#98;&#x2e;&#x63;&#111;&#x6d;</a>来验证是否连接上。可能会遇到以下ssh connect time out的问题：<br>    $ ssh -T <a href="mailto:&#103;&#x69;&#x74;&#64;&#103;&#105;&#x74;&#104;&#117;&#x62;&#x2e;&#x63;&#x6f;&#x6d;">&#103;&#x69;&#x74;&#64;&#103;&#105;&#x74;&#104;&#117;&#x62;&#x2e;&#x63;&#x6f;&#x6d;</a><br>    ssh: connect to host github.com port 22: Connection timed out<br>针对这个问题，解决办法如下：需要通过修改所生成的rsa所在地址~&#x2F;.ssh下面的config文件所实现的<br>    <img src="/images/03.png" alt="Alt text"><br>在config中加入以下代码，而config很有可能是空文件，需要自己加入<br>    Host github.com<br>    HostName ssh.github.com  # 这是最重要的部分<br>    User git<br>    Port 443<br>    PreferredAuthentications publickey<br>    IdentityFile ~&#x2F;.ssh&#x2F;id_rsa<br>一般进行到此步骤便可以解决问题。</p>
+
+            
+        </div>
+    </div>
+    <div class="post-tags">
+        
+        <span class="icon">
+            <svg class="fa-icon"><use xlink:href="#tags-solid"></use></svg>
+        </span>
+        
+        
+        <span class="tag">
+            
+            <a href="/tags/解决从本地push到云的某些问题" style="color: #ff7d73">
+                解决从本地push到云的某些问题
+            </a>
+        </span>
+        
+    </div>
+    <a href="/2024/01/26/修复fatal/" class="go-post">
+        阅读全文
+    </a>
+</div>
+
+<div class="post">
     <a href="/2023/11/30/学习-packet-tracer/">
         <h2>
             学习 Packet Tracer
@@ -254,7 +311,7 @@
         
         <span class="tag">
             
-            <a href="/tags/纪念" style="color: #03a9f4">
+            <a href="/tags/纪念" style="color: #ffa2c4">
                 纪念
             </a>
         </span>
@@ -361,7 +418,7 @@
         
         <span class="tag">
             
-            <a href="/tags/整理现状" style="color: #03a9f4">
+            <a href="/tags/整理现状" style="color: #00bcd4">
                 整理现状
             </a>
         </span>
@@ -412,7 +469,7 @@
         
         <span class="tag">
             
-            <a href="/tags/夜行" style="color: #03a9f4">
+            <a href="/tags/夜行" style="color: #00bcd4">
                 夜行
             </a>
         </span>
@@ -463,14 +520,14 @@
         
         <span class="tag">
             
-            <a href="/tags/夜行" style="color: #ff7d73">
+            <a href="/tags/夜行" style="color: #ffa2c4">
                 夜行
             </a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/电影" style="color: #03a9f4">
+            <a href="/tags/电影" style="color: #00bcd4">
                 电影
             </a>
         </span>
@@ -520,7 +577,7 @@
         
         <span class="tag">
             
-            <a href="/tags/水逆的一天" style="color: #ff7d73">
+            <a href="/tags/水逆的一天" style="color: #ffa2c4">
                 水逆的一天
             </a>
         </span>
@@ -563,14 +620,14 @@
         
         <span class="tag">
             
-            <a href="/tags/测试" style="color: #03a9f4">
+            <a href="/tags/测试" style="color: #00a596">
                 测试
             </a>
         </span>
         
         <span class="tag">
             
-            <a href="/tags/日常" style="color: #ff7d73">
+            <a href="/tags/日常" style="color: #ffa2c4">
                 日常
             </a>
         </span>
