@@ -1,0 +1,27 @@
+/* 站点优化补丁：主视觉 WebP 优先、图片防抖动、无脚本兜底 */
+#home-background {
+  background-image: url(/assets/01-1600.jpg);
+  background-image: image-set(
+    url("/assets/01-1600.webp") type("image/webp"),
+    url("/assets/01-1600.jpg") type("image/jpeg")
+  );
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.content img,
+.article img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* JS 不可用时，内容仍应完整可读 */
+.no-vue #loading { display: none !important; }
+
+/* 电话菜单的类名由 Vue 的 :class 绑定生成，无 Vue 时不存在，需按 id 兜底 */
+.no-vue #phone-menu { display: none !important; }
+.no-vue #phone-menu .curtain { display: none !important; }
+@media (max-width: 900px) {
+  .no-vue #phone-menu { display: block !important; }
+}

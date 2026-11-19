@@ -1,0 +1,16 @@
+@font-face{font-family:'Font Awesome 6 Free';font-style:normal;font-weight:900;font-display:block;src:url(fonts/fa-solid-subset.woff) format('woff')}
+@font-face{font-family:'Font Awesome 6 Brands';font-style:normal;font-weight:400;font-display:block;src:url(fonts/fa-brands-subset.woff) format('woff')}
+.fa-solid,.fa-brands,.fa-regular{display:inline-block;font-style:normal;font-variant:normal;line-height:1;text-rendering:auto;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+.fa-solid{font-family:'Font Awesome 6 Free';font-weight:900}
+.fa-brands{font-family:'Font Awesome 6 Brands';font-weight:400}
+.fa-fw{text-align:center;width:1.25em}
+[data-fa-symbol]{display:none!important}
+.fa-tags:before{content:"\f02c"}
+.fa-bookmark:before{content:"\f02e"}
+.fa-id-card:before{content:"\f2c2"}
+.fa-house:before{content:"\f015"}
+.fa-box-archive:before{content:"\f187"}
+.fa-calendar:before{content:"\f133"}
+.fa-bars:before{content:"\f0c9"}
+.fa-qq:before{content:"\f1d6"}
+.fa-github:before{content:"\f09b"}

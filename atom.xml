@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>吹の窝</title>
+  <link href="https://windchaos.github.io/"/>
+  <link rel="self" href="https://windchaos.github.io/atom.xml"/>
+  <id>https://windchaos.github.io/</id>
+  <updated>2026-11-19T12:00:00Z</updated>
+  <author><name>windchaos</name></author>
+  <entry>
+    <title>修复Fatal | 吹の窝</title>
+    <link href="https://windchaos.github.io/2024/01/26/修复fatal/"/>
+    <id>https://windchaos.github.io/2024/01/26/修复fatal/</id>
+    <updated>2024-01-26T20:00:00Z</updated>
+    <summary>克隆代码时报错git@gitee.com: Permission denied (publickey). fatal: Could not read from remote repository.</summary>
+  </entry>
+  <entry>
+    <title>学习 Packet Tracer | 吹の窝</title>
+    <link href="https://windchaos.github.io/2023/11/30/学习-packet-tracer/"/>
+    <id>https://windchaos.github.io/2023/11/30/学习-packet-tracer/</id>
+    <updated>2023-11-30T20:00:00Z</updated>
+    <summary>Cisco PT模拟实验(1) 交换机的基本配置与管理实验目的：掌握交换机的基本配置与管理了解交换机配置的基本命令。 技术原理：二层交换机工作在OSI模型的第2层（数据链路层），识别数据包中的MAC地址信息，</summary>
+  </entry>
+  <entry>
+    <title>蝉鸣消失在天尽头 | 吹の窝</title>
+    <link href="https://windchaos.github.io/2023/08/26/蝉鸣消失在天尽头/"/>
+    <id>https://windchaos.github.io/2023/08/26/蝉鸣消失在天尽头/</id>
+    <updated>2023-08-26T20:00:00Z</updated>
+    <summary>某天 我醒来 晚日将落。向日葵盛开的夏天 自此告终（9.16）今年的夏天还不能算作开始（9.17）舀起满勺夏风 仍是难留（9.23）你是否会融化于无尽盛夏（10.17）另记：曾经沧海难为水，除却巫山不是云鲤城之夏，</summary>
+  </entry>
+  <entry>
+    <title>入党纪念 | 吹の窝</title>
+    <link href="https://windchaos.github.io/2023/05/26/入党纪念/"/>
+    <id>https://windchaos.github.io/2023/05/26/入党纪念/</id>
+    <updated>2023-05-26T20:00:00Z</updated>
+    <summary>亲爱的达瓦里氏： 5月20日是入党日期 人最宝贵的是生命。生命对于每个人只有一次，人的一生应当这样度过：当他回首往事的时候，他不会因为虚度年华而悔恨，也不会因为碌碌无为而羞愧；临终之际，</summary>
+  </entry>
+  <entry>
+    <title>夏花 | 吹の窝</title>
+    <link href="https://windchaos.github.io/2022/08/21/夏花/"/>
+    <id>https://windchaos.github.io/2022/08/21/夏花/</id>
+    <updated>2022-08-21T20:00:00Z</updated>
+    <summary>爱意萌生于月光下阳炎眩乱它枯死在热情中影子印烙在水泥板上夏日已矣你走入没有日月的夜你能发现它它比夜更黑</summary>
+  </entry>
+  <entry>
+    <title>夜行 | 吹の窝</title>
+    <link href="https://windchaos.github.io/2022/08/20/夜行/"/>
+    <id>https://windchaos.github.io/2022/08/20/夜行/</id>
+    <updated>2022-08-20T20:00:00Z</updated>
+    <summary>人类的灵魂，据说颜色是纯白无瑕的。他们喜欢冲入雨纷纷的夜里，穿行在星光灿烂的原野。暗夜的苦闷追不上飞驰的身影，请追随白光，放声高歌。大胆走你的夜路。</summary>
+  </entry>
+  <entry>
+    <title>疫苗和电影和夜路 | 吹の窝</title>
+    <link href="https://windchaos.github.io/2022/08/06/电影和夜路/"/>
+    <id>https://windchaos.github.io/2022/08/06/电影和夜路/</id>
+    <updated>2022-08-06T20:00:00Z</updated>
+    <summary>上午去打了狂犬疫苗，竟要100+一针，一共5针。可能有点贵，希望学平险能给报销一点。 晚上和sf去看《独行月球》，剧情虽略显老套，不过也有戳中我笑点和泪点的时候。</summary>
+  </entry>
+  <entry>
+    <title>伤口 | 吹の窝</title>
+    <link href="https://windchaos.github.io/2022/08/05/伤口/"/>
+    <id>https://windchaos.github.io/2022/08/05/伤口/</id>
+    <updated>2022-08-05T20:00:00Z</updated>
+    <summary>康康你的（密码）</summary>
+  </entry>
+  <entry>
+    <title>测试文章 | 吹の窝</title>
+    <link href="https://windchaos.github.io/2022/08/05/测试文章/"/>
+    <id>https://windchaos.github.io/2022/08/05/测试文章/</id>
+    <updated>2022-08-05T20:00:00Z</updated>
+    <summary>这是一篇测试文章，创建于二零二二年八月四日夜，七夕。此夜喂食小狗，独游古镇，夜览星河，披漫天繁星，驰骋于林间公路，甚快。</summary>
+  </entry>
+  <entry>
+    <title>Hello World | 吹の窝</title>
+    <link href="https://windchaos.github.io/2022/08/03/hello-world/"/>
+    <id>https://windchaos.github.io/2022/08/03/hello-world/</id>
+    <updated>2022-08-03T20:00:00Z</updated>
+    <summary>（介绍已删除）</summary>
+  </entry>
+</feed>
